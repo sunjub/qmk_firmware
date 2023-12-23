@@ -1,6 +1,6 @@
 #include QMK_KEYBOARD_H
 
-#include "sunjub_split_test.h"
+#include "rp2040_split.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(

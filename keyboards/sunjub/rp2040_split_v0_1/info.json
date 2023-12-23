@@ -8,15 +8,22 @@
         "pid": "0x5332",
         "device_version": "0.0.1"
     },
+    "features": {
+        "extrakey": true,
+        "mousekey": true,
+        "rgb_matrix": false
+    },
     "debounce": 5,
     "matrix_pins": {
-        "cols": ["F5", "F6", "B2", "B3", "B1", "F7", "D2"],
-        "rows": ["D4", "C6", "D7", "E6", "B4", "F4"]
+        "cols": ["GP2", "GP3", "GP29", "GP27", "GP6", "GP5", "GP"],
+        "rows": ["GP0", "GP1", "GP7", "GP16", "GP28", "GP28"]
     },
     "diode_direction": "COL2ROW",
     "encoder": {
+        "enabled": true,
         "rotary": [
-            {"pin_a": "B6", "pin_b": "B5"}
+            {"pin_a": "GP14", "pin_b": "GP15"},
+            {"pin_a": "GP26", "pin_b": "GP25"}
         ]
     },
     "split": {
@@ -37,16 +44,20 @@
         },
         "matrix_pins": {
             "right": {
-                "cols": ["F5", "F6", "F7", "B1", "B3", "B2", "B6"],
-                "rows": ["D4", "C6", "D7", "E6", "B4", "B5"]
+                "cols": ["GP2", "GP3", "GP29", "GP27", "GP6", "GP5", "GP"],
+                "rows": ["GP0", "GP1", "GP7", "GP16", "GP28", "GP28"]
             }
+        },
+        "transport": {
+            "sync_matrix_state": true
         }
     },
     "tapping": {
         "term": 132
     },
     "ws2812": {
-        "pin": "D3"
+        "driver": "vendor",
+        "pin": "GP9"
     },
     "rgblight": {
         "saturation_steps": 8,
@@ -61,7 +72,7 @@
             "rgb_test": true
         }
     },
-    "processor": "atmega32u4",
+    "processor": "RP2040",
     "bootloader": "caterina",
     "layouts": {
         "LAYOUT": {
