@@ -74,10 +74,18 @@
         "max_brightness": 80,
         "led_map": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
         "sleep": true,
+        "split": true,
         "split_count": [8, 8],
         "animations": {
             "rainbow_swirl": true,
             "rgb_test": true
+        },
+        "layers": {
+            "enabled": true,
+            "max": 6
+        },
+        "default": {
+            "val": 0
         }
     },
     "layouts": {
