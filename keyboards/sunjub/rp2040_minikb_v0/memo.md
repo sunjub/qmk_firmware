@@ -59,5 +59,3 @@ KC_F12,  KC_F6,   KC_F7,
 KC_DEL,  KC_6,    KC_7,    
 
 
-
-                {"matrix": [3, 8], "x": 3, "y": 8},

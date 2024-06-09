@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "rp2040_split.h"
+#include "rp2040_minikb_v0.h"
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     if (!process_record_user(keycode, record)) { return false; }
@@ -41,7 +41,7 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     if (!encoder_update_user(index, clockwise)) { return false; }
     if (index == 0) { /* Navpad side encoder */
       switch (get_highest_layer(layer_state|default_layer_state)) {
-      case _BASE:
+      case 0:
         if (clockwise) {
           tap_code16(KC_WH_D);
         } else {
@@ -49,7 +49,7 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
         break;
       
-      case _FN1:
+      case 1:
         if (clockwise) {
           rgblight_increase_hue();
         } else {
@@ -57,7 +57,7 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
         break;
       
-      case _FN2:
+      case 2:
         if (clockwise) {
           rgblight_increase_sat();
         } else {
@@ -65,7 +65,7 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
         break;
       
-      case _FN3:
+      case 3:
         if (clockwise) {
           rgblight_increase_sat();
         } else {
@@ -79,7 +79,7 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     }
     if (index == 1) { /* Helix side encoder */
       switch (get_highest_layer(layer_state|default_layer_state)) {
-      case _BASE:
+      case 0:
         if (clockwise) {
           tap_code(KC_1);
         } else {
@@ -87,7 +87,7 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
         break;
       
-      case _FN1:
+      case 1:
         if (clockwise) {
           tap_code16(KC_RPRN);
         } else {
@@ -95,7 +95,7 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
         break;
       
-      case _FN2:
+      case 2:
         if (clockwise) {
           tap_code16(KC_RCBR);
         } else {

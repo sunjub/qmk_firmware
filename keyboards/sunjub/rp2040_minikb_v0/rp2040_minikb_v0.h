@@ -22,9 +22,9 @@ enum custom_keycodes {
   TAP_00 = QK_KB_0
 };
 
-enum layer_name {
-    _BASE,
-    _FN1,
-    _FN2,
-    _FN3
-};
+// enum layer_name {
+//     _BASE,
+//     _FN1,
+//     _FN2,
+//     _FN3
+// };
